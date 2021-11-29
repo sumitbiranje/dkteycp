@@ -2,7 +2,7 @@
     session_start();
     $message="";
     if(count($_POST)>0) {
-        $con = mysqli_connect('localhost','root','','admission-cell') or die('Unable To connect');
+        $con = mysqli_connect('sql112.epizy.com','epiz_30471003','llYlAffpOHtkY','epiz_30471003_admissioncell') or die('Unable To connect');
         $result = mysqli_query($con,"SELECT * FROM user WHERE username='" . $_POST["username"] . "' and password = '". $_POST["password"]."'");
         $row  = mysqli_fetch_array($result);
         if(is_array($row)) {
